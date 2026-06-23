@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Bookmark landing page</title>
+
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .orange {
+        filter: invert(56%) sepia(90%) saturate(1000%) hue-rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER starts here -->
+    <header
+      class="flex flex-row justify-between items-center px-10 py-10 md:px-28"
+    >
+      <div id="logo">
+        <a href="index.html">
+          <img src="images/logo-bookmark.svg" alt="img" />
+        </a>
+      </div>
+
+      <div id="navigation_menu" class="hidden xl:block">
+        <nav class="flex gap-10 items-center">
+          <ul class="flex gap-10">
+            <li><a href="#" class="hover:text-amber-600">FEATURES</a></li>
+            <li><a href="#" class="hover:text-amber-600">PRICING</a></li>
+            <li><a href="#" class="hover:text-amber-600">CONTACT</a></li>
+          </ul>
+          <button
+            id="navigation_menu_Btn"
+            class="border-2 px-4 py-2 rounded-[5px] cursor-pointer text-gray-400 hover:border-amber-600 hover:text-amber-600"
+          >
+            LOGIN
+          </button>
+        </nav>
+      </div>
+
+      <div id="Burger_Menu_Icon" class="cursor-pointer xl:hidden">
+        <img src="images/icon-hamburger.svg" alt="img" />
+      </div>
+    </header>
+
+    <!-- Burder Menu (SECTION) -->
+    <div
+      id="Burder_Menu"
+      class="fixed inset-0 bg-[#242A45]/90 flex flex-col justify-center p-10 transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+    >
+      <div
+        id="Logo_and_Close"
+        class="flex flex-row items-center justify-center gap-32"
+      >
+        <div id="Burger_Menu_logo" class="brightness-5 invert">
+          <a href="index.html">
+            <img src="images/logo-bookmark.svg" alt="img" />
+          </a>
+        </div>
+
+        <div id="Close_Menu_Icon">
+          <img src="images/icon-close.svg" alt="img" class="cursor-pointer" />
+        </div>
+      </div>
+
+      <div id="Burger_navigation_menu" class="text-center text-amber-50">
+        <nav>
+          <ul class="p-10">
+            <li class="p-2 border-t border-gray-600 border-b">
+              <a href="#">FEATURES</a>
+            </li>
+            <li class="p-2 border-gray-600 border-b">
+              <a href="#">PRICING</a>
+            </li>
+            <li class="p-2 border-gray-600 border-b">
+              <a href="#">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        id="Burger_Menu_LogIN_Btn"
+        class="text-center text-white mt-5 font-semibold border-2 cursor-pointer rounded-[5px] p-3 text-2xl"
+      >
+        <button>LOGIN</button>
+      </div>
+
+      <div
+        id="Burger_Menu_Social_Icons"
+        class="flex items-center gap-10 justify-center mt-80"
+      >
+        <div id="facebook_icon">
+          <a href="#">
+            <img src="images/icon-facebook.svg" alt="img" />
+          </a>
+        </div>
+
+        <div id="twitter_icon">
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="img" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- A Simple Bookmark Manager  (SECTION) -->
+    <section id="A_Simple_Bookmark_Manager" class="h-screen relative">
+      <div
+        id="A_Simple_Bookmark_Manager_Img"
+        class="w-[20rem] mx-auto flex justify-center mt-10 md:w-[38rem] xl:ml-[40rem] 2xl:ml-[60%]"
+      >
+        <img class="" src="images/illustration-hero.svg" alt="img" />
+      </div>
+
+      <div
+        id="A_Simple_Bookmark_Manager_Img_Blue_BackGround"
+        class="bg-blue-600 h-[25%] w-[18rem] rounded-l-full relative -mt-40 float-right -z-10 md:w-[32rem] md:h-[40%] md:-mt-80"
+      ></div>
+
+      <div
+        id="A_Simple_Bookmark_Manager_h1"
+        class="text-3xl text-center mt-26 font-semibold md:text-5xl md:w-[60%] md:mx-auto xl:text-left xl:mx-28 xl:w-[20rem] xl:text-3xl xl:-mt-80"
+      >
+        <h1>A Simple Bookmark Manager</h1>
+      </div>
+
+      <div
+        id="A_Simple_Bookmark_Manager_Paragrap"
+        class="text-center mt-5 p-5 text-gray-400 font-semibold text-[1rem] md:text-[1.3rem] md:px-20 xl:text-left xl:mx-9 xl:w-[40rem] xl:text-[1rem]"
+      >
+        <p>
+          A clean and simple interface to organize your favourite website. Open
+          a new browser tab and see your sites load instantly. Try it for free.
+        </p>
+      </div>
+
+      <div
+        id="A_Simple_Bookmark_Manager_Two_Btns"
+        class="flex gap-5 justify-center xl:text-left xl:-mx-14 xl:w-[40rem] xl:text-[1rem]"
+      >
+        <button
+          class="bg-blue-600 p-2 text-amber-50 font-semibold rounded-[5px] cursor-pointer xl:hover:bg-amber-50 xl:hover:border-2 xl:hover:border-blue-950 xl:hover:text-blue-950"
+        >
+          Get it on Chrome
+        </button>
+        <button
+          class="bg-gray-100 p-2 font-semibold rounded-[5px] cursor-pointer xl:hover:border-2 xl:hover:border-grey-900 xl:hover:text-gray-500"
+        >
+          Get it on Firefox
+        </button>
+      </div>
+    </section>
+
+    <!-- FEATURES (SECTION) -->
+
+    <section
+      id="Features"
+      class="-mt-40 flex flex-col justify-center items-center md:mt-20"
+    >
+      <div
+        id="Features_h1"
+        class="text-3xl font-semibold md:text-4xl xl:-mt-72"
+      >
+        <h1>Features</h1>
+      </div>
+
+      <div
+        id="Features_Paragrap"
+        class="text-center mt-5 p-5 text-gray-400 font-semibold text-[1rem] md:text-[1.3rem] md:px-20 xl:text-[1rem] xl:w-[40rem]"
+      >
+        <p>
+          Our aim is to make it quick and easy for you to acccess you favourite
+          websites. Your bookmarks sync between your devices so you can access
+          them on the go.
+        </p>
+      </div>
+
+      <div
+        id="Slider_carousel_Block"
+        class="flex flex-col justify-center items-center md:flex-row md:gap-5 md:border-b-2"
+      >
+        <div
+          id="Features_SimpleBookmarking"
+          class="border-t-gray-300 border-t-2 w-[160%] text-center p-5 border-b-gray-300 border-b-2 text-black md:border-0"
+        >
+          <h2 id="Features_SimpleBookmarking_h2" class="cursor-pointer md:w-40">
+            Simple Bookmarking
+          </h2>
+          <hr
+            id="Features_SimpleBookmarking_hr"
+            class="border-amber-600 border-2 w-40 left-1/2 -translate-x-1/2 absolute mt-4 md:left-20 md:translate-x-0 lg:left-52 xl:left-[21rem] 2xl:left-[34%]"
+          />
+        </div>
+
+        <div
+          id="Features_SpeedySearching"
+          class="w-[160%] text-center p-5 border-b-gray-300 border-b-2 text-gray-600 md:border-0"
+        >
+          <h2 id="Features_SpeedySearching_h2" class="cursor-pointer md:w-40">
+            Speedy Searching
+          </h2>
+          <hr
+            id="Features_SpeedySearching_Hr"
+            class="border-amber-600 border-2 w-40 left-1/2 -translate-x-1/2 absolute mt-4 hidden"
+          />
+        </div>
+
+        <div
+          id="Features_EasySharing"
+          class="w-[160%] text-center p-5 border-b-gray-300 border-b-2 text-gray-600 md:border-0"
+        >
+          <h2 id="Features_EasySharing_H2" class="cursor-pointer md:w-40">
+            Easy Sharing
+          </h2>
+          <hr
+            id="Features_EasySharing_Hr"
+            class="border-amber-600 border-2 w-40 left-1/2 -translate-x-1/2 absolute mt-4 hidden md:left-auto md:right-20 md:translate-x-0 lg:right-52 xl:right-[21rem] 2xl:right-[34%]"
+          />
+        </div>
+      </div>
+
+      <div
+        id="Features_Img_Blue_BackGround"
+        class="bg-blue-600 h-[12rem] w-[18rem] rounded-r-full mt-20 self-start md:h-[20rem] md:w-[35rem] md:mt-[150px]"
+      ></div>
+
+      <div
+        id="Features_Img"
+        class="absolute z-10 w-[18rem] mx-auto mt-[25rem] md:w-[30rem] md:mt-[350px] xl:-mt-10 xl:-ml-[35rem] 2xl:-ml-[50%]"
+      >
+        <img id="featuresImage" src="images/illustration-features-tab-1.svg" />
+      </div>
+    </section>
+
+    <!-- BOOKMARK IN ONE CLICK (SECTION) -->
+    <section
+      id="Bookmark_in_One_Click"
+      class="flex flex-col justify-center items-center mt-10 xl:-mt-80"
+    >
+      <div id="Bookmark_in_One_Click_H1">
+        <h1
+          class="text-3xl font-semibold w-44 text-center md:text-4xl md:w-96 xl:text-3xl xl:ml-96"
+        >
+          Bookmark in one click
+        </h1>
+      </div>
+
+      <div
+        id="Bookmark_in_One_Click_Paragrap"
+        class="text-center mt-5 p-5 text-gray-400 font-semibold text-[1rem] md:text-[1.3rem] md:px-32 xl:text-[1rem] xl:w-[40rem] xl:ml-[30rem] xl:text-left"
+      >
+        <p>
+          Organize your bookmarks however you like. Our simple drag-and-drop
+          interface gives your complete control over how you manage your
+          favourite sites.
+        </p>
+      </div>
+
+      <div id="Bookmark_in_One_Click_Btn">
+        <button
+          class="bg-blue-600 p-2 px-4 text-amber-50 font-semibold rounded-[5px] cursor-pointer xl:ml-[12rem]"
+        >
+          More Info
+        </button>
+      </div>
+    </section>
+
+    <!-- DOWNLOAD THE EXTENSIONS (SECTION) -->
+    <section
+      id="Download_The_Extensions"
+      class="flex flex-col justify-center items-center mt-26 xl:mt-60"
+    >
+      <div id="Download_The_Extensions_H1">
+        <h1 class="md:text-4xl md:font-semibold">Download the extensions</h1>
+      </div>
+
+      <div
+        id="Download_The_Extensions_Paragrap"
+        class="text-center mt-5 p-5 text-gray-400 font-semibold text-[1rem] md:text-[1.3rem] md:px-20 xl:text-[1rem] xl:w-[40rem]"
+      >
+        <p>
+          We've got more browsers in the pipeline. Please do let us know if
+          you've got a favourite you'd like us to prioritize.
+        </p>
+      </div>
+
+      <!-- Three Extensions -->
+
+      <div id="Three_Extensins" class="md:flex xl:gap-10">
+        <!-- Chrome -->
+        <div
+          id="Add_to_Chrome"
+          class="shadow-xl rounded-[10px] px-5 py-5 mt-10 flex flex-col items-center gap-5 md:w-60 md:py-5"
+        >
+          <div id="Add_to_Chrome_Img">
+            <img
+              src="images/logo-chrome.svg"
+              alt="img"
+              class="md:w-10 xl:w-20"
+            />
+          </div>
+
+          <div id="Add_to_Chrome_H1">
+            <h1 class="text-xl font-semibold w-44 text-center md:text-sm">
+              Add to Chrome
+            </h1>
+          </div>
+
+          <div
+            id="Add_to_Chrome_Paragrap"
+            class="text-center text-gray-400 font-semibold text-[1rem] md:text-sm"
+          >
+            <p>Minimum version 62</p>
+          </div>
+
+          <div id="Add_to_Chrome_Dots_Img">
+            <img src="images/bg-dots.svg" alt="img" class="md:w-40" />
+          </div>
+
+          <div
+            id="Add_to_Chrome_Btn"
+            class="bg-blue-600 p-2 text-amber-50 font-semibold rounded-[5px] cursor-pointer md:text-sm hover:bg-amber-50 hover:border-2 hover:border-blue-800 hover:text-blue-800"
+          >
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+
+        <!-- Firefox -->
+        <div
+          id="Add_to_Firefox"
+          class="shadow-xl rounded-[10px] px-5 py-5 mt-10 flex flex-col items-center gap-5 md:w-60 md:py-5"
+        >
+          <div id="Add_to_Chrome_Img">
+            <img
+              src="images/logo-firefox.svg"
+              alt="img"
+              class="md:w-10 xl:w-20"
+            />
+          </div>
+
+          <div id="Add_to_Firefox_H1">
+            <h1 class="text-xl font-semibold w-44 text-center md:text-sm">
+              Add to Firefox
+            </h1>
+          </div>
+
+          <div
+            id="Add_to_Firefox_Paragrap"
+            class="text-center text-gray-400 font-semibold text-[1rem] md:text-sm"
+          >
+            <p>Minimum version 55</p>
+          </div>
+
+          <div id="Add_to_Firefox_Dots_Img">
+            <img src="images/bg-dots.svg" alt="img" />
+          </div>
+
+          <div
+            id="Add_to_Firefox_Btn"
+            class="bg-blue-600 p-2 text-amber-50 font-semibold rounded-[5px] cursor-pointer md:text-sm hover:bg-amber-50 hover:border-2 hover:border-blue-800 hover:text-blue-800"
+          >
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+
+        <!-- Opera -->
+        <div
+          id="Add_to_Opera"
+          class="shadow-xl rounded-[10px] px-5 py-5 mt-10 flex flex-col items-center gap-5 md:w-60 md:py-5"
+        >
+          <div id="Add_to_Opera_Img">
+            <img
+              src="images/logo-opera.svg"
+              alt="img"
+              class="md:w-10 xl:w-20"
+            />
+          </div>
+
+          <div id="Add_to_Opera_H1">
+            <h1 class="text-xl font-semibold w-44 text-center md:text-sm">
+              Add to Opera
+            </h1>
+          </div>
+
+          <div
+            id="Add_to_Opera_Paragrap"
+            class="text-center text-gray-400 font-semibold text-[1rem] md:text-sm"
+          >
+            <p>Minimum version 46</p>
+          </div>
+
+          <div id="Add_to_Opera_Dots_Img">
+            <img src="images/bg-dots.svg" alt="img" />
+          </div>
+
+          <div
+            id="Add_to_Opera_Btn"
+            class="bg-blue-600 p-2 text-amber-50 font-semibold rounded-[5px] cursor-pointer md:text-sm hover:bg-amber-50 hover:border-2 hover:border-blue-800 hover:text-blue-800"
+          >
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions (SECTION) -->
+    <section
+      id="Frequently_Asked_Questions"
+      class="flex flex-col justify-center items-center mt-26"
+    >
+      <div id="Frequently_Asked_Questions_H1">
+        <h1
+          class="text-3xl font-semibold w-60 text-center md:text-4xl md:w-[100%]"
+        >
+          Frequently Asked Questions
+        </h1>
+      </div>
+
+      <div
+        id="Frequently_Asked_Questions_Paragrap"
+        class="text-center mt-5 p-5 text-gray-400 font-semibold text-[1rem] md:text-[1.3rem] md:px-20"
+      >
+        <p>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+      </div>
+
+      <!-- MENU LIST WITH ARROW -->
+
+      <div
+        id="What_is_Bookmark"
+        class="mt-10 flex items-center gap-44 border-b-gray-300 border-b-2 p-4"
+      >
+        <div id="What_is_Bookmark_H2">
+          <h2 class="font-semibold hover:text-amber-600">What is Bookmark?</h2>
+        </div>
+
+        <div id="What_is_Bookmark_Img">
+          <img
+            id="What_is_Bookmark_Arrow_Img"
+            src="images/icon-arrow.svg"
+            alt="img"
+            class="transition-transform duration-300 cursor-pointer"
+          />
+        </div>
+      </div>
+      <div
+        id="What_is_Bookmark_Text"
+        class="text-gray-400 p-5 hidden md:px-52 xl:px-[30rem] 2xl:px-[50rem]"
+      >
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+        convallis ultricies. Mauris augue massa, ultricies non ligula.
+        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </div>
+
+      <div
+        id="How_can_I_request_a_new_browser"
+        class="flex items-center gap-[4.2rem] border-b-gray-300 border-b-2 p-4"
+      >
+        <div id="How_can_I_request_a_new_browser_H2">
+          <h2 class="font-semibold hover:text-amber-600">
+            How can I request a new browser?
+          </h2>
+        </div>
+
+        <div id="How_can_I_request_a_new_browser_Img">
+          <img
+            src="images/icon-arrow.svg"
+            alt="img"
+            class="transition-transform duration-300 cursor-pointer"
+          />
+        </div>
+      </div>
+
+      <div
+        id="How_can_I_request_a_new_browser_Text"
+        class="text-gray-400 p-5 hidden md:px-52 xl:px-[30rem] 2xl:px-[50rem]"
+      >
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+        convallis ultricies. Mauris augue massa, ultricies non ligula.
+        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </div>
+
+      <div
+        id="Is_there_a_mobile_app"
+        class="flex items-center gap-[9.6rem] border-b-gray-300 border-b-2 p-4"
+      >
+        <div id="Is_there_a_mobile_app_H2">
+          <h2 class="font-semibold hover:text-amber-600">
+            Is there a mobile app?
+          </h2>
+        </div>
+
+        <div id="Is_there_a_mobile_app_Img">
+          <img
+            src="images/icon-arrow.svg"
+            alt="img"
+            class="transition-transform duration-300 cursor-pointer"
+          />
+        </div>
+      </div>
+
+      <div
+        id="Is_there_a_mobile_app_Text"
+        class="text-gray-400 p-5 hidden md:px-52 xl:px-[30rem] 2xl:px-[50rem]"
+      >
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+        convallis ultricies. Mauris augue massa, ultricies non ligula.
+        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </div>
+
+      <div
+        id="What_about_other_Chromium_browsers"
+        class="flex items-center gap-7 border-b-gray-300 border-b-2 p-4"
+      >
+        <div id="What_about_other_Chromium_browsers_H2">
+          <h2 class="font-semibold hover:text-amber-600">
+            What about other Chromium browsers?
+          </h2>
+        </div>
+
+        <div id="What_about_other_Chromium_browsers_Img">
+          <img
+            src="images/icon-arrow.svg"
+            alt="img"
+            class="transition-transform duration-300 cursor-pointer"
+          />
+        </div>
+      </div>
+
+      <div
+        id="What_about_other_Chromium_browsers_Text"
+        class="text-gray-400 p-5 hidden md:px-52 xl:px-[30rem] 2xl:px-[50rem]"
+      >
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+        ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
+        convallis ultricies. Mauris augue massa, ultricies non ligula.
+        Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+        Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+      </div>
+
+      <div id="Frequently_Asked_Questions_Btn" class="mt-10">
+        <button
+          class="bg-blue-600 p-2 px-4 text-amber-50 font-semibold rounded-[5px] cursor-pointer"
+        >
+          More Info
+        </button>
+      </div>
+    </section>
+
+    <!-- Stay up-to-date with what we’re doing (SECTION) -->
+    <section
+      id="Stay_up_to_date_with_what_we_re_doing"
+      class="p-10 bg-blue-600 text-amber-50 mt-20"
+    >
+      <div id="35,000+_ALREADY_JOINED_H4">
+        <h4 class="text-sm text-center">35,000+ ALREADY JOINED</h4>
+      </div>
+
+      <div id="Stay_up_to_date_with_what_we_re_doing_H1">
+        <h1 class="text-3xl font-semibold text-center">
+          Stay up-to-date with what we’re doing
+        </h1>
+      </div>
+
+      <div id="Stay_up_to_date_with_what_we_re_doing_Form">
+        <form class="flex flex-col mt-10 gap-5 md:flex-row md:justify-center">
+          <div class="relative w-fit flex">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+              class="border border-black p-2 text-black bg-white rounded-[5px] w-[36vh]"
+              id="Email_Input"
+            />
+
+            <img
+              id="error_icon"
+              src="images/icon-error.svg"
+              alt="img"
+              class="hidden absolute right-2 mt-5 -translate-y-1/2 w-5 h-5"
+            />
+          </div>
+
+          <p
+            id="error_text"
+            class="hidden text-white text-sm -mt-10 pl-5 relative italic md:absolute md:mt-10 md:-ml-48"
+          >
+            Whoops, make sure it's an email
+          </p>
+
+          <button
+            type="submit"
+            class="bg-[#FA5959] p-2 rounded-[5px] cursor-pointer hover:bg-amber-50 hover:text-red-700"
+            id="Contact_Us_Btn"
+          >
+            Contact Us
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER  (SECTION) -->
+
+    <footer
+      class="flex flex-col items-center p-10 bg-[#242A45] text-amber-50 md:flex-row md:gap-20 md:py-0 md:justify-center"
+    >
+      <div id="logo">
+        <a href="index.html">
+          <img
+            src="images/logo-bookmark.svg"
+            alt="img"
+            class="brightness-5 invert"
+          />
+        </a>
+      </div>
+
+      <div id="navigation_menu" class="text-center">
+        <nav>
+          <ul class="p-10 md:flex">
+            <li class="p-2 hover:text-amber-600"><a href="#">FEATURES</a></li>
+            <li class="p-2 hover:text-amber-600"><a href="#">PRICING</a></li>
+            <li class="p-2 hover:text-amber-600"><a href="#">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div id="Social_Icons" class="flex items-center gap-10">
+        <div id="facebook_icon">
+          <a href="#">
+            <img id="FB_Icon" src="images/icon-facebook.svg" alt="img" />
+          </a>
+        </div>
+
+        <div id="twitter_icon">
+          <a href="#">
+            <img src="images/icon-twitter.svg" alt="img" />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
